@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="user-info">
+            <img src="dp1.jpg" class="dp" alt="User 1 DP">
+            <h2>User 1</h2>
+            <p id="user1-status">Offline</p>
+        </div>
+        <div class="user-info">
+            <img src="dp2.jpg" class="dp" alt="User 2 DP">
+            <h2>User 2</h2>
+            <p id="user2-status">Offline</p>
+        </div>
+        <button onclick="clearChat()">Clear Chat</button>
+    </div>
+
+    <div class="chat-box" id="chat-box"></div>
+
+    <div class="input-box">
+        <input type="text" id="user1-message" placeholder="User 1: Type your message..." onfocus="setOnline('user1')" onblur="setOffline('user1')">
+        <button onclick="sendMessage('user1')">Send as User 1</button>
+    </div>
+
+    <div class="input-box">
+        <input type="text" id="user2-message" placeholder="User 2: Type your message..." onfocus="setOnline('user2')" onblur="setOffline('user2')">
+        <button onclick="sendMessage('user2')">Send as User 2</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
